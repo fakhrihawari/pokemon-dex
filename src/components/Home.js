@@ -40,13 +40,13 @@ const Home = () => {
             </HeroSearch> */}
             <Hero>
                 <HeroImage>
-                    <img src="/images/pokemon-text.png" alt="" />
+                    <img src="/pokemon-dex/images/pokemon-text.png" alt="title_pokemon" />
                 </HeroImage>
             </Hero>
 
             <PokemonContainer>
-                {pokemons.map((pokemon) =>
-                    <PokemonCard key={pokemon.id}>
+                {pokemons.map((pokemon,index) =>
+                    <PokemonCard key={index}>
                         <Wrapper>
                             <Link to={'/detail/' + pokemon.id}>
                                 <img src={PokemonImageUrl + pokemon.id + ".png"} alt={pokemon.name} />
